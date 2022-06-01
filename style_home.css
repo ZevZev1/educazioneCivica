@@ -1,0 +1,146 @@
+body{
+	overflow: hidden;
+}
+*{
+	padding: 0;
+  	margin: 0;
+	font-size: 1.2rem;
+
+}
+
+/*variables*/
+.light {
+	--backgroundColor: white;
+	--titleBg: rgba(0,0,0, 0.8);
+	--titleClr: white;
+	--shadow: 0 0 15px 5px rgba(0, 0, 0, 0.8);
+	--textClr: gray;
+}
+.dark {
+	--backgroundColor: #121212;
+	--titleBg: rgba(255,255,255, 0.8);
+	--titleClr: #121212;
+	--shadow: 0 0 15px 5px rgba(255,255,255, 0.3);
+	--textClr: white;
+}
+
+.container {
+  position: relative;
+  overflow: hidden;
+  background-color: var(--backgroundColor);
+  width: 100%;
+  min-height: 100vh;
+}
+
+.toggle-btn {
+  position: absolute;
+  bottom: 3vh;
+  left: 50vw;
+	transform: translateX(-50%);
+  background: var(--textClr);
+  outline: none;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  
+}
+
+.anim {
+  position: absolute;
+	top: 0;
+  left: 0;
+  z-index: 100;
+  animation: circ 2s 1 both;
+}
+
+@keyframes circ {
+  0%{
+    clip-path: circle(0% at 50% 100%);
+  }
+  100%{
+    clip-path: circle(150% at 50% 100%);
+  }
+}
+
+/*backgrounds*/
+.bg1{
+	background-image: url("imgs/bg_home/left.jpg");
+	min-height: 100%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: left;
+	position: absolute;
+	left: 0px;
+	width: 35%;
+	z-index: 3;
+	box-shadow: var(--shadow);
+	transition: .5s;
+}
+.bg1:hover, .bg2:hover{
+	transform: scale(1.02);
+}
+.bg2{
+	background-image: url("imgs/bg_home/right.jpg");
+	background-position: right;
+	background-size: cover;
+	position: absolute;
+	min-height: 100%;
+	right: 0px;
+	width: 35%;
+	z-index: 3;
+	box-shadow: var(--shadow);
+	transition: .5s;
+}
+
+/*title*/
+.title		{
+	text-align: center;
+	color: var(--titleClr);
+	position: absolute;
+	top: 15%;
+	width: 100%;
+	z-index: 2;
+}
+.title span.border{
+	background-color: var(--titleBg);
+	padding: 18px;
+	font-size: 25px;
+	letter-spacing: 10px;
+	text-align: center;
+}
+h1 {
+	color: var(--textClr);
+	position: absolute;
+	font-size: 18px;
+	text-align: justify;
+	z-index: 1;
+	padding-left: 37%;
+	padding-right: 37%;
+	padding-top: 13rem;
+}
+p	{
+	color: var(--textClr);
+	position: absolute;
+	padding-top: 40%;
+	text-align: center;
+	font-size: 15px;
+	z-index: 0;
+	width: 100%
+}
+img {
+	position: absolute;
+	left: 50%;
+	top: 95%;
+	cursor: pointer;
+	width: 70px;
+	transform: translate(-50%, -50%);
+	z-index: 0;
+}
+
+
+::selection {
+	background: tomato;
+	color: white;
+}

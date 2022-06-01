@@ -1,0 +1,118 @@
+*{
+	font-size: 1.2rem;
+}
+
+body, html{
+	height: 100%;
+	margin: 0;
+}
+
+.light {
+	--backgroundColor: white;
+	--titleBg: rgba(0,0,0, 0.8);
+	--titleClr: white;
+	--shadow: 0 0 15px 5px rgba(0, 0, 0, 0.8);
+	--textClr: gray;
+}
+.dark {
+	--backgroundColor: #121212;
+	--titleBg: rgba(255,255,255, 0.8);
+	--titleClr: #121212;
+	--shadow: 0 0 15px 5px rgba(255,255,255, 0.3);
+	--textClr: white;
+}
+
+.container {
+  position: relative;
+  overflow: hidden;
+  background-color: var(--backgroundColor);
+  width: 100%;
+  min-height: 100vh;
+}
+/*nimated image on hover*/
+.link img{
+	transition: .2s;
+	border: 1px solid gray;
+	border-radius: 20px;
+}
+.link img:hover{
+  transform: scale(0.95);
+}
+/*backgrounds*/
+.bg, .bg1, .bg2{
+	position: relative;
+	background-attachment: fixed;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	opacity: .8;
+}
+.bg	{
+	background-image: url("imgs/bg_anime/bg.jpg");
+	min-height: 100%;
+}
+.bg1	{
+	background-image: url("imgs/bg_anime/bg_sheet.jpg");
+	min-height: 400px;
+}
+.bg2{
+	background-image: url("imgs/bg_anime/bg_animation.jpg");
+	min-height: 400px;
+}
+
+/*titles*/
+.title		{
+	text-align: center;
+	color: white;
+	position: absolute;
+	top: 50%;
+	width: 100%;
+	z-index: 2;
+}
+.title span.border{
+	background-color: rgba(0, 0, 0, 0.8);
+	padding: 18px;
+	font-size: 25px;
+	letter-spacing: 10px;
+	text-align: center;
+}
+/*white document*/
+.doc	{
+	position: relative;
+	color: #777;
+	font-size: 18px;
+	background-color: white;
+	text-align: center;
+	padding-left: 250px;
+	padding-right: 250px;
+	padding-top: 80px;
+	padding-bottom: 50px;
+	text-align: justify;
+	z-index: 1;
+	box-shadow: 0 4px 10px 8px rgba(0, 0, 0, 0.2);
+}
+/*footer*/
+footer	{
+	position: sticky;
+	bottom: 0;
+	background-color: gray;
+	padding: 40px;
+	text-align: center;
+	color: white;
+	letter-spacing: 10px;
+}
+footer img{
+	width: 65px;
+	position: absolute;
+	left: 5%;
+	bottom: 25%;
+}
+.border{
+	width: 100%;
+	height: 100%;
+}
+
+::selection {
+	background: tomato;
+	color: white;
+}
